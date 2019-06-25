@@ -1,0 +1,41 @@
+!!APITestProject
+baseUrl: http://localhost:8088
+#全局参数
+globalRequestParameters:
+  apiVersion: '1.0'
+  apiTypeId: '0'
+#测试套集合
+testSuites:
+  firstSuite:
+    description: testSuiteDesc
+    #测试用例集合
+    testCaseList:
+      -
+        apiUrl: /cal/add
+        description: add
+        name: add
+        method: post
+        requestParameters:
+          a: 1
+          b: 2
+        resultVerify:
+          #结果校验
+          is:
+            result: 3
+        #sql，在测试前或测试后做数据准备或还原
+        sqlCommands: {}
+      -
+        apiUrl: /book/index
+        description: index
+        name: test whether service run
+        method: get
+        requestParameters:
+          name: 'test'
+        resultVerify:
+          #结果校验
+          containsString:
+            result: "Hello"
+        #sql，在测试前或测试后做数据准备或还原
+        sqlCommands: {}
+    #测试套参数集合
+    testSuiteParameters: {}

@@ -1,0 +1,7 @@
+.idea
+*.iws
+*.iml
+*.ipr
+/target
+/allure-results
+/test-output
