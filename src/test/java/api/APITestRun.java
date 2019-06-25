@@ -5,6 +5,7 @@ import org.testng.TestNG;
 public class APITestRun {
 
     public static void main(String[] args) {
+        //读取测试用例
         APITestInfo apiTestInfo=new APITestInfo();
         apiTestInfo.readTestCase();
         int size = apiTestInfo.getBlockingQueue().size();

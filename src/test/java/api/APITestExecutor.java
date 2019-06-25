@@ -32,11 +32,10 @@ public class APITestExecutor {
         RestAssured.baseURI = baseURL;
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
         RestAssured.requestSpecification = new RequestSpecBuilder().build().accept(JSON).contentType(JSON);
-
         testCase = APITestInfo.getNewTestCase();
     }
 
-    @Test(retryAnalyzer = RetryAnalyzerImpl.class)
+    @Test
     public void runCase() {
 
         ValidatableResponse validatableResponse = RestAssuredAPI.getValidatableResponse(testCase.getMethod(),

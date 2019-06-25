@@ -61,7 +61,6 @@ public class APITestCaseFromYaml {
 
     @Test
     public void runTestCase() {
-        JSONObject jsonObject;
         Map<String, APITestSuite> testSuites = apiTestProject.getTestSuites();
         //读取测试集
         for (Map.Entry<String, APITestSuite> entry : testSuites.entrySet()) {
