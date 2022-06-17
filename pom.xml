@@ -14,7 +14,7 @@
         <testng.version>6.14.3</testng.version>
         <rest-assured.version>3.2.0</rest-assured.version>
         <jackson-yaml.version>2.9.8</jackson-yaml.version>
-        <fastjson.version>1.2.49</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
     </properties>
 
     <dependencies>
